@@ -1,5 +1,3 @@
-import './styling/App.css';
-
 export function openNav() {
     const proprtiateLen = window.innerWidth * 0.2;
 

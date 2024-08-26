@@ -38,8 +38,14 @@ header h1 {
   flex-wrap: nowrap;
   flex-direction: row;
   align-content: center;
+  align-items: center;
   justify-content: left;
   padding-left: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#pageTitle h2 {
+  margin-bottom: 0;
 }
 
 #navOpenButton {
@@ -71,6 +77,7 @@ header h1 {
   display: block;
   transition: 0.3s;
   text-align: left;
+  text-wrap: nowrap;
 }
 #sideNav button:hover {
   color: #f1f1f1;
@@ -81,6 +88,11 @@ header h1 {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
+}
+
+/* Content section styling */
+#contentSection {
+  margin: 0 25px;
 }
 
 /*# sourceMappingURL=App.css.map */

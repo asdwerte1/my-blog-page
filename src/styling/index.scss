@@ -43,8 +43,15 @@ header {
     flex-wrap: nowrap;
     flex-direction: row;
     align-content: center;
+    align-items: center;
     justify-content: left;
     padding-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    h2 {
+        margin-bottom: 0;
+    }
 }
 
 #navOpenButton {
@@ -78,6 +85,7 @@ header {
         display: block;
         transition: 0.3s;
         text-align: left;
+        text-wrap: nowrap;
     }
 
     button:hover {
@@ -92,4 +100,10 @@ header {
         font-size: 36px;
         margin-left: 50px;
     }
+}
+
+/* Content section styling */
+
+#contentSection {
+    margin: 0 25px;
 }
