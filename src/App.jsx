@@ -3,8 +3,11 @@ import Nav from './Nav.jsx';
 import PageBanner from './Banner.jsx';
 import About from './About.jsx';
 import Content from './Content.jsx';
+import { useState } from 'react';
 
 export default function App() {
+
+
   return (
     <div className="App">
       <PageBanner />

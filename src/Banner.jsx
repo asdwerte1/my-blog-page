@@ -1,5 +1,6 @@
 import { openNav } from './Nav.jsx';
 import logo from './logo.png';
+import { curentTopic } from './State.js';
 
 export default function PageBanner() {
     return (
@@ -29,7 +30,11 @@ function PageTitleandNavBtn() {
     return (
         <div id="pageTitle">
             <NavButton />
-            <h2 className='comic-neue-light-italic display-6'>Placeholder</h2>
+            <h2 className='comic-neue-light-italic display-6'>{capitaliseFirstLetter(curentTopic.topic)}</h2>
         </div>
     )
+}
+
+export function capitaliseFirstLetter(word) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
 }

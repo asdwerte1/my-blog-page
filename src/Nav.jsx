@@ -1,3 +1,5 @@
+import { curentTopic } from "./State";
+
 export function openNav() {
     const proprtiateLen = window.innerWidth * 0.2;
 
@@ -34,15 +36,18 @@ function closeNav() {
     document.body.style.backgroundColor = "white";
 }
 
+function selectTopic(event) {
+    curentTopic.topic = event.target.innerHTML.toLowerCase();           
+}
 export default function Nav() {
     return (
         <nav>
             <div id='sideNav'>
                 <button className='closebtn' onClick={closeNav}>&times;</button>
-                <button>Home</button>
-                <button>Development</button>
-                <button>Cooking and Baking</button>
-                <button>Music</button>
+                <button onClick={selectTopic}>Home</button>
+                <button onClick={selectTopic}>Development</button>
+                <button onClick={selectTopic}>Cooking and Baking</button>
+                <button onClick={selectTopic}>Music</button>
             </div>
         </nav>
     )
