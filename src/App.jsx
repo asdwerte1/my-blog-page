@@ -5,6 +5,7 @@ import Baking from './pages/Baking';
 import NavBar from './components/NavBar';
 import NavButton from './components/NavButton';
 import Footer from './components/Footer';
+import Photography from './pages/Photography';
 
 const App = () => {
     return (
@@ -17,6 +18,7 @@ const App = () => {
                         <Route path='/' element={<Home />} />
                         <Route path="development" element={<Development />} />
                         <Route path='baking' element={<Baking />} />
+                        <Route path='photography' element={<Photography />}/>
                     </Routes>
                 </main>
                 <Footer />
