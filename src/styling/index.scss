@@ -2,7 +2,6 @@
 
 $tillana-font: 'Tillana', sytem-ui;
 
-
 /* ------------------------- Body --------------------- */
 body, #main {
     padding: 0;
@@ -14,6 +13,17 @@ main {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+    padding-right: 15px;
+    text-align: left;
+}
+
+/* animation styling for main */
+#main {
+    transition: margin-left .5s ease;
+}
+
+body {
+    transition: background-color 0.5s ease;
 }
 
 /* ------------------------ NavBar -------------------- */
@@ -76,22 +86,13 @@ main {
     }
 }
 
-/* animation styling for main */
-#main {
-    transition: margin-left .5s ease;
-}
-
-body {
-    transition: background-color 0.5s ease;
-}
-
 #navOpenButton {
     background-color: transparent;
     border: solid thin transparent;
     border-radius: 25%;
     transition: 0.2s;
     font-size: 1.5rem;
-    margin-left: 20px;
+    margin-left: 15px;
 
     &:hover {
         border-color: rgb(17, 17, 17, 0.5);
@@ -101,22 +102,27 @@ body {
 
 //-------------------------------------------------------//
 
-/* -------------------- Header styling ----------------- */
-
+/* -------------------- Content styling ----------------- */
+// Header
 header {
+    width: 100%;
     h1 {
         font-family: $tillana-font, cursive;
         font-weight: 600px;
         font-size: 3.25rem;
         padding-left: 5%;
+        padding-right: 2%;
     }
 
     p,
     ul,
     h2 {
-        padding-left: 10%;
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
+
+// Content
 
 /* ---------------------- Footer ----------------------- */
 
@@ -144,9 +150,11 @@ footer {
 
     #left {
         text-align: left;
+        margin-left: 20px;
     }
 
     #right {
-        text-align: right;
+        text-align: left;
+        margin-left: 20px;
     }
 }
