@@ -4,6 +4,7 @@ import Development from './pages/Development';
 import Baking from './pages/Baking';
 import NavBar from './components/NavBar';
 import NavButton from './components/NavButton';
+import Footer from './components/Footer';
 
 const App = () => {
     return (
@@ -15,8 +16,9 @@ const App = () => {
                     <Route path='/' element={<Home />} />
                     <Route path="development" element={<Development />} />
                     <Route path='baking' element={<Baking />} />
-                </Routes>
+                </Routes>   
             </div>
+            <Footer />
         </>
     );
 }
