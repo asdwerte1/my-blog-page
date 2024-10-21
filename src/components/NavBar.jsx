@@ -7,13 +7,13 @@ const NavBar = () => {
                 <li>
                     <button className="closeBtn" onClick={closeNav}>&times;</button></li>
                 <li>
-                    <NavLink to="/"><button onClick={closeNav}>Home</button></NavLink>
+                    <NavLink to="/" className="navLink"><button onClick={closeNav}>Home</button></NavLink>
                 </li>
                 <li>
-                    <NavLink to="development"><button onClick={closeNav}>Development</button></NavLink>
+                    <NavLink to="development" className="navLink"><button onClick={closeNav}>Development</button></NavLink>
                 </li>
                 <li>
-                    <NavLink to="baking"><button onClick={closeNav}>Baking</button></NavLink>
+                    <NavLink to="baking" className="navLink"><button onClick={closeNav}>Baking</button></NavLink>
                 </li>
             </ul>
         </nav>
