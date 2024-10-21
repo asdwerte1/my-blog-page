@@ -1,109 +1,134 @@
-/* General styling */
-body {
-    transition: background-color 0.5s;
-}
-#root {
-    transition: margin-left 0.5s;
+/* ------------------- Imported Fonts -------------------*/
+
+$tillana-font: 'Tillana', sytem-ui;
+
+/* --------------------- Nav styling ------------------- */
+
+nav {
+    ul {
+        list-style-type: none;
+        text-decoration: none;
+
+        .navLink {
+            display: block;
+            font-size: 1.85rem;
+            color: #343434;
+            text-decoration: none;
+            font-family: $tillana-font, cursive;
+            font-weight: 200;
+            font-style: italic;
+        }
+    }
 }
 
-/* Header function styling */
+//-------------------------------------------------------//
+
+/* -------------------- Header styling ----------------- */
+
 header {
-    margin: 0;
-    border-bottom: solid thin #1B264F;
-    background-color: #CDECFD;
-
-    #blog-header {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-        align-items: center;
-        flex-wrap: nowrap;
-    }
-
-    img {
-        $max-dimension: 200px;
-        $min-dimension: 100px;
-        max-width: $max-dimension;
-        max-height: $max-dimension;
-        min-width: $min-dimension;
-        min-height: $min-dimension;
-        border-bottom-right-radius: 20%;
-        border-top-right-radius: 20%;
-    }
-
     h1 {
-        margin-left: 5%;
+        font-family: $tillana-font, cursive;
+        font-weight: 600px;
+        font-size: 3.25rem;
+        padding-left: 5%;
     }
-}
 
-/* Navigation Styling */
-
-#pageTitle {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    align-content: center;
-    align-items: center;
-    justify-content: left;
-    padding-left: 30px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
+    p,
+    ul,
     h2 {
-        margin-bottom: 0;
+        padding-left: 10%;
     }
 }
 
-#navOpenButton {
-    background-color: transparent;
-    font-size: 25px;
-    border: none;
-    margin-right: 30px;
+/* ------------------------- Flex ---------------------- */
+
+.flexContainerRow {
+    display: flex;
+    flex-direction: row;
 }
 
+.flexContainerCol {
+    display: flex;
+    flex-direction: column;
+}
 
-#sideNav {
+.justifyStart {
+    justify-content: flex-start;
+}
+
+.justifyAround {
+    justify-content: space-around;
+}
+
+.justifyBetween {
+    justify-content: space-between;
+}
+
+.alignStart {
+    align-items: flex-start;
+}
+
+/* ------------------------ NavBar -------------------- */
+.sideNav {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #222222;
+    background-color: #111111;
     overflow-x: hidden;
     padding-top: 60px;
-    transition: 0.5s;
-
+    transition: width 0.5s ease;
 
     button {
-        padding: 8px 24px 8px 32px;
+        padding: 8px 8px 8px 32px;
         text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        background-color: transparent;
-        border: none;
+        font-size: 1.75rem;
+        color: #d9d9d9;
         display: block;
-        transition: 0.3s;
-        text-align: left;
-        text-wrap: nowrap;
+        background-color: transparent;
+        border: transparent;
+        text-decoration-style: none;
+        transition: color 0.3s ease;
+        &:hover {
+            color: #f1f1f1;
+        }
     }
 
-    button:hover {
-        color: #f1f1f1;
+    a {
+        text-decoration: none;
     }
 
-
-    .closebtn {
+    .closeBtn {
         position: absolute;
         top: 0;
         right: 25px;
         font-size: 36px;
         margin-left: 50px;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
-/* Content section styling */
+    /* animation styling for main */
+#main {
+    transition: margin-left .5s ease;
+    padding: 20px;
+}
 
-#contentSection {
-    margin: 0 25px;
+body {
+    transition: background-color 0.5s ease;
+}
+
+#navOpenButton {
+    background-color: transparent;
+    border: solid thin transparent;
+    border-radius: 25%;
+    transition: 0.2s;
+    &:hover {
+        border-color: #111111;
+        color: #111111;
+    }
 }

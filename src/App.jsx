@@ -1,28 +1,24 @@
-import './styling/App.css';
-import Nav from './Nav.jsx';
-import PageBanner from './Banner.jsx';
-import About from './About.jsx';
-import Content from './Content.jsx';
-import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home';
+import Development from './pages/Development';
+import Baking from './pages/Baking';
+import NavBar from './components/NavBar';
+import NavButton from './components/NavButton';
 
-export default function App() {
-
-
-  return (
-    <div className="App">
-      <PageBanner />
-      <Nav />
-      <MainContent />
-    </div>
-  );
+const App = () => {
+    return (
+        <>
+            <NavBar />
+            <div id='main'>
+                <NavButton />
+                <Routes>
+                    <Route path='/' element={<Home />} />
+                    <Route path="development" element={<Development />} />
+                    <Route path='baking' element={<Baking />} />
+                </Routes>
+            </div>
+        </>
+    );
 }
 
-function MainContent() {
-  // Function to create the container for the main content of the page/topic
-  return (
-    <div id='contentSection' className='row'>
-      <About />
-      <Content />
-    </div>
-  )
-}
+export default App;
