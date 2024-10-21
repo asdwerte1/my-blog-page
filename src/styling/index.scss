@@ -80,8 +80,8 @@ body {
         border-bottom: solid thin #222222;
         &:hover {
             color: #efefef;
-            border-bottom: solid medium #efefef;
-            transition: border 0.3s ease;
+            border-bottom: solid thin #efefef;
+            transition: border 1.0s ease;
         }
     }
 }
