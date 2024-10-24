@@ -6,6 +6,7 @@ import NavBar from './components/NavBar';
 import NavButton from './components/NavButton';
 import Footer from './components/Footer';
 import Photography from './pages/Photography';
+import Post from './pages/Post';
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                         <Route path="development" element={<Development />} />
                         <Route path='baking' element={<Baking />} />
                         <Route path='photography' element={<Photography />}/>
+                        <Route path='post' element={<Post />} />
                     </Routes>
                 </main>
                 <Footer />

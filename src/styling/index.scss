@@ -3,18 +3,14 @@
 $tillana-font: 'Tillana', sytem-ui;
 
 /* ------------------------- Body --------------------- */
-body, #main {
+body,
+#main {
     padding: 0;
     margin: 0;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding-right: 15px;
-    text-align: left;
+p {
+    margin-left: 5%;
 }
 
 /* animation styling for main */
@@ -55,6 +51,7 @@ body {
         text-decoration-style: none;
         transition: color 0.3s ease;
         margin-right: 25px;
+
         &:hover {
             color: #f1f1f1;
         }
@@ -78,6 +75,7 @@ body {
         text-decoration: none;
         padding: 10px;
         border-bottom: solid thin #222222;
+
         &:hover {
             color: #efefef;
             border-bottom: solid thin #efefef;
@@ -105,7 +103,9 @@ body {
 /* -------------------- Content styling ----------------- */
 // Header
 header {
+
     width: 100%;
+
     h1 {
         font-family: $tillana-font, cursive;
         font-weight: 600px;
@@ -119,6 +119,84 @@ header {
     h2 {
         padding-left: 5%;
         padding-right: 5%;
+    }
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    label {
+        font-size: 1.2rem;
+        margin-right: 10px;
+    }
+
+    div {
+        margin-bottom: 10px;
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+form#newPost {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    div {
+        margin-left: 15%;
+        margin-bottom: 10px;
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-start;
+
+        input,
+        textarea {
+            width: 100%;
+            border: solid 1px #3f3f3f;
+            border-radius: 7px;
+            padding: 10px 20px;
+        }
+        input {
+            height: 3rem;
+        }
+        textarea {
+            height: 5rem;
+        }
+    }
+
+    #submit {
+        width: 200px;
+        margin-left: 15%;
+        padding: 5px 10px;
+        background-color: #d6f2f2;
+        color: #010101;
+        border: solid 1px transparent;
+        border-radius: 10px;
+        transition: 0.5s ease;
+        margin-bottom: 10px;
+        &:hover {
+            border: solid 1px black;
+            box-shadow: 5px 5px 25px #dedede;
+            transition: 0.5s ease;
+            background-color: #d4f0e9;
+        }
+    }
+}
+
+.form {
+    p {
+        font-weight: 500;
+        font-size: 1.75rem;
     }
 }
 

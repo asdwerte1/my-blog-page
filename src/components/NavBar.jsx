@@ -18,6 +18,9 @@ const NavBar = () => {
                 <li>
                     <NavLink to="photography" className="navLink"><button onClick={closeNav}>Photography</button></NavLink>
                 </li>
+                <li>
+                    <NavLink to="post" className="navLink"><button onClick={closeNav}>New Post</button></NavLink>
+                </li>
             </ul>
         </nav>
     )
